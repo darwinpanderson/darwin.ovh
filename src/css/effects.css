@@ -1,0 +1,69 @@
+/* Animations for effects */
+
+.fadeinleft{
+	animation-name: fadeInLeft;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}
+
+.fadeintop{
+	animation-name: fadeInTop;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}
+
+.fadeinright{
+	animation-name: fadeInRight;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}
+
+.fadeinbottom{
+	animation-name: fadeInBottom;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}
+
+@keyframes fadeInLeft {
+   0% {
+      opacity: 0;
+      transform: translateX(-10px);
+   }
+   100% {
+      opacity: 1;
+      transform: translateX(0);
+   }
+}   
+
+@keyframes fadeInTop {
+   0% {
+      opacity: 0;
+      transform: translateY(-10px);
+   }
+   100% {
+      opacity: 1;
+      transform: translateY(0);
+   }
+}   
+
+@keyframes fadeInRight {
+   0% {
+      opacity: 0;
+      transform: translateX(10px);
+   }
+   100% {
+      opacity: 1;
+      transform: translateX(0);
+   }
+} 
+
+@keyframes fadeInBottom {
+   0% {
+      opacity: 0;
+      transform: translateY(10px);
+   }
+   100% {
+      opacity: 1;
+      transform: translateY(0);
+   }
+}  

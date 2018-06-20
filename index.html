@@ -3,6 +3,7 @@
 	<head>
 		<title>Darwin.ovh - Webserver of Darwin Anderson</title>
 		<link rel="stylesheet" href="src/css/index.css">
+		<link rel="stylesheet" href="src/css/effects.css">
 
 		<!--inclusion of Font Awesome and Google Fonts-->
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
@@ -15,7 +16,18 @@
 		<script src="src/js/index.js"></script>
 	</head>
 	<body ng-controller="main as m">
-		<div class="navmenu">
+		<div class="navmenu fadeinleft">
+			<div class="head">
+				<div class="profpic">
+					<img src="src/img/profile.jpg" title="Darwin Anderson - Profile Picture"/>
+				</div>
+				<div class="header">
+					Darwin Anderson
+				</div>
+				<div class="subhead">
+					Full-Stack Web Developer
+				</div>
+			</div>
 			<div class="item" ng-repeat="l in m.navlinks" ng-click="m.route(l.loc)">
 				<div class="icon">
 					<i class="fas {{l.icon}}"></i>

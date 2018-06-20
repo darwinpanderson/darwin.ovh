@@ -6,6 +6,7 @@ html, body, div, p{
 
 html, body{
 	height : 100%;
+	overflow: hidden;
 }
 
 body{
@@ -21,6 +22,35 @@ body{
 	font-family      : 'Lato', sans-serif;
 
 	flex             : 1;
+}
+
+.navmenu .head{
+	display:		flex;
+	flex-direction:	column;
+	justify-content: center;
+	align-items: center;
+	color:			white;
+	margin-bottom:	5px;
+	padding-bottom:	5px;
+	border-bottom:	3px double white;
+	text-align:		center;
+	margin-top:		10px;
+}
+
+.navmenu .head img{
+	max-width:50%;
+	max-height:50%;
+	border-radius:	50px;
+}
+
+.navmenu .header{
+	font-size:		11pt;
+	font-variant:  	small-caps;
+}
+
+.navmenu .subhead{
+	font-size:  	10pt;
+	font-variant:  	small-caps;
 }
 
 .navmenu .item{
