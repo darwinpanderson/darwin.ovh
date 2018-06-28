@@ -80,6 +80,11 @@
     opacity: 0;
 }
 
+.delay2{
+    animation-delay:    2s;
+    opacity: 0;
+}
+
 @keyframes fadeInLeft {
    0% {
       opacity: 0;

@@ -12,6 +12,13 @@ app.config(function($stateProvider, $urlRouterProvider){
 		url: '/contact',
 		templateUrl: 'src/html/contact.html'
 	})
+	.state('resume',{
+		url: '/resume',
+		templateUrl: 'src/html/resume.html',
+		onEnter: function($window) {
+            $window.open('https://resume.darwin.ovh', '_blank');
+        }
+	})
 })
 
 app.controller('main',function($transitions, $state, $timeout){
@@ -22,12 +29,33 @@ app.controller('main',function($transitions, $state, $timeout){
 			'name'	:'home',
 			'icon'	:'fa-home',
 			'label'	:'Home',
-			'loc'	:'home'
+			'loc'	:'home',
+			'link'	: false
 		},{
 			'name'	:'contact',
 			'icon'	:'fa-address-card',
 			'label'	:'Contact Info',
-			'loc'	:'contact'
+			'loc'	:'contact',
+			'link'	: false
+		},{
+			'name'	:'projects',
+			'icon'	:'fa-address-card',
+			'label'	:'Projects',
+			'loc'	:'projects',
+			'link'	: false
+		},{
+			'name'	:'resume',
+			'icon'	:'fa-file',
+			'label'	:'Resume',
+			'loc'	:'resume'
 		}
 	]
+
+	self.init = function(){
+		$timeout( function(){
+			self.menushow = true
+		}, 500)
+	}
+
+	self.init()
 })

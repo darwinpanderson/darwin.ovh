@@ -5,12 +5,14 @@
 	height:			100%;
 	width:			40%;
 	margin:	auto;
+	white-space: nowrap;
 }
 
 .items .header{
 	font-size:	28pt;
 	border-bottom:	3px double white;
-	width:	80%;
+	width:	100%;
+	text-align:	center;
 }
 
 .contactItem{
