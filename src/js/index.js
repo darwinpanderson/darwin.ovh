@@ -1,4 +1,4 @@
-var app = angular.module("site",['ui.router']);
+var app = angular.module("site",['ui.router','ngAnimate']);
 app.config(function($stateProvider, $urlRouterProvider){
 	$urlRouterProvider.when('/', 'home')
 	$urlRouterProvider.otherwise("home")
@@ -8,14 +8,15 @@ app.config(function($stateProvider, $urlRouterProvider){
 		url: '/home',
 		templateUrl: 'src/html/home.html'
 	})
-	.state('contact_info',{
-		url: '/home',
-		templateUrl: 'src/html/contact_info.html'
+	.state('contact',{
+		url: '/contact',
+		templateUrl: 'src/html/contact.html'
 	})
 })
 
-app.controller('main',function($transitions, $state){
+app.controller('main',function($transitions, $state, $timeout){
 	var self = this
+	self.menushow = false
 	self.navlinks = [
 		{
 			'name'	:'home',
@@ -26,12 +27,7 @@ app.controller('main',function($transitions, $state){
 			'name'	:'contact',
 			'icon'	:'fa-address-card',
 			'label'	:'Contact Info',
-			'loc'	:'contact_info'
+			'loc'	:'contact'
 		}
 	]
-
-	self.route = function(loc){
-		$state.go(loc)
-		console.log(loc)
-	}
 })

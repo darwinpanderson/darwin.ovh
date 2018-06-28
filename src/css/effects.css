@@ -4,24 +4,80 @@
 	animation-name: fadeInLeft;
     animation-duration: 1s;
     animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
 
 .fadeintop{
 	animation-name: fadeInTop;
     animation-duration: 1s;
     animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
 
 .fadeinright{
 	animation-name: fadeInRight;
     animation-duration: 1s;
     animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
 
 .fadeinbottom{
 	animation-name: fadeInBottom;
     animation-duration: 1s;
     animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.fadeoutleft{
+  animation-name: fadeOutLeft;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.fadeouttop{
+  animation-name: fadeOutTop;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.fadeoutright{
+  animation-name: fadeOutRight;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.fadeoutbottom{
+  animation-name: fadeOutBottom;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.flipinleft{
+  animation-name: flipInLeft;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.flipoutleft{
+  animation-name: flipOutLeft;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.delay0_5{
+  animation-delay:    0.5s;
+  opacity:            0;
+}
+
+.delay1{
+    animation-delay:    1s;
+    opacity: 0;
 }
 
 @keyframes fadeInLeft {
@@ -67,3 +123,73 @@
       transform: translateY(0);
    }
 }  
+
+@keyframes fadeOutLeft {
+   0% {
+      opacity: 1;
+      transform: translateX(0px);
+   }
+   100% {
+      opacity: 0;
+      transform: translateX(-10);
+   }
+}   
+
+@keyframes fadeOutTop {
+   0% {
+      opacity: 0;
+      transform: translateY(-10px);
+   }
+   100% {
+      opacity: 1;
+      transform: translateY(0);
+
+   }
+}   
+
+@keyframes fadeOutRight {
+   0% {
+      opacity: 0;
+      transform: translateX(10px);
+      width:    inherit;
+   }
+   100% {
+      opacity: 1;
+      transform: translateX(0);
+      width:  0;
+   }
+} 
+
+@keyframes fadeOutBottom {
+   0% {
+      opacity: 0;
+      transform: translateY(10px);
+   }
+   100% {
+      opacity: 1;
+      transform: translateY(0);
+
+   }
+}  
+
+@keyframes flipInLeft {
+   0% {
+      opacity: 0;
+      transform: rotateY(90deg);
+   }
+   100% {
+      opacity: 1;
+      transform: rotateY(0deg);
+   }
+}  
+
+@keyframes flipOutLeft {
+   0% {
+      opacity: 1;
+      transform: rotateY(0deg);
+   }
+   100% {
+      opacity: 0;
+      transform: rotateY(90deg);
+   }
+} 

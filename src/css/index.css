@@ -4,15 +4,36 @@ html, body, div, p{
 	padding : 0;
 }
 
-html, body{
+html, body, #page{
 	height : 100%;
 	overflow: hidden;
+	position: relative;
 }
 
 body{
 	display        : flex;
 	background     : linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%), url(../img/escheresque_ste.png);
 	flex-direction : row;
+	position:		relative;
+}
+
+#menuToggle{
+	height:			auto;
+	padding:		5px;
+	color:			white;
+	transition:		color 0.5s, background-color 0.5s;
+	font-size:		20pt;
+	position:		absolute;
+	top:			0;
+	left:			0;
+	z-index:		1001;
+}
+
+#menuToggle:hover{
+	cursor:			pointer;
+	cursor:			hand;
+	color:			teal;
+	background-color:	rgba(150,150,150,0.4);
 }
 
 .navmenu{
@@ -22,6 +43,19 @@ body{
 	font-family      : 'Lato', sans-serif;
 
 	flex             : 1;
+	opacity:		1;
+	transition:		all ease-in-out 0.5s;
+	min-width:		200px;
+}
+
+.navmenu.ng-hide{
+	width:			0;
+	opacity:		0;
+	margin-left:	-200px;
+}
+
+.navmenu.ng-hide-add, .navmenu.ng-hide-remove{
+	display:	block !important;
 }
 
 .navmenu .head{
@@ -79,7 +113,7 @@ body{
 }
 
 .content{
-	padding     : 5px;
+	padding     : 	50px 15px 15px 15px;
 
 	font-family : 'Roboto', sans-serif;
 	color       : white;
