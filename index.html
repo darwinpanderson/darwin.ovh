@@ -20,7 +20,7 @@
 		<script src="src/js/index.js"></script>		
 	</head>
 	<body ng-controller="main as m">
-		<div id="menuToggle" ng-click="m.menushow=!m.menushow">
+		<div id="menuToggle" ng-click="m.menushow=!m.menushow" ng-class="{'menuToggled' : m.menushow}">
 			<i class="fas fa-bars"></i>
 		</div>
 		<div ng-show="m.menushow" class="navmenu">
