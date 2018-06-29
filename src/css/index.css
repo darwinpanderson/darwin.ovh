@@ -44,7 +44,7 @@ body{
 
 .navmenu{
 	height           : 100%;
-	min-width        : 200px;
+	width        	 : 200px;
 
 	opacity          : 1;
 	background-color : black;
@@ -52,7 +52,11 @@ body{
 
 	transition       : all ease-in-out 0.5s;
 
-	flex             : 1;
+	position         : absolute;
+	display          : block;
+	top              : 0;
+	left             : 0;
+	z-index          : 1000;
 }
 
 .navmenu.ng-hide{
@@ -131,25 +135,28 @@ body{
 	color       : white;
 
 	flex        : 9;
+
+	font-size:	26pt;
+}
+
+/*small screen modifications*/
+@media screen and (max-width: 1025px) and (min-width: 651px) {
+	.content{
+		font-size:	18pt;
+	}
 }
 
 /*mobile modifications*/
-@media screen and (max-width: 500px) {
-	.container{
-		font-size : 18pt;
+@media screen and (max-width: 650px) {
+	.content{
+		font-size : 11pt;
 	}
 
-	.container .infodiv{
+	.content .infodiv{
 		width : 80%;
 	}
 
 	.navmenu{
-		position         : absolute;
-		display          : block;
-		top              : 0;
-		left             : 0;
-		z-index          : 1000;
-
 		width            : 60%;
 
 		background-color : black;
