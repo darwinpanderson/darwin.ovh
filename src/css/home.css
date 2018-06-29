@@ -17,16 +17,3 @@
 .infodiv div{
 	margin-bottom:	15px;
 }
-
-/*mobile modifications*/
-@media screen and (max-width: 500px) {
-
-	.container{
-		font-size:	18pt;
-	}
-
-	.container .infodiv{
-		width:	80%;
-	}
-
-}

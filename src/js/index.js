@@ -12,6 +12,10 @@ app.config(function($stateProvider, $urlRouterProvider){
 		url: '/contact',
 		templateUrl: 'src/html/contact.html'
 	})
+	.state('projects',{
+		url: '/projects',
+		templateUrl: 'src/html/projects.html'
+	})
 	.state('resume',{
 		url: '/resume',
 		templateUrl: 'src/html/resume.html',
@@ -29,20 +33,17 @@ app.controller('main',function($transitions, $state, $timeout){
 			'name'	:'home',
 			'icon'	:'fa-home',
 			'label'	:'Home',
-			'loc'	:'home',
-			'link'	: false
+			'loc'	:'home'
 		},{
 			'name'	:'contact',
 			'icon'	:'fa-address-card',
 			'label'	:'Contact Info',
-			'loc'	:'contact',
-			'link'	: false
+			'loc'	:'contact'
 		},{
 			'name'	:'projects',
 			'icon'	:'fa-address-card',
 			'label'	:'Projects',
-			'loc'	:'projects',
-			'link'	: false
+			'loc'	:'projects'
 		},{
 			'name'	:'resume',
 			'icon'	:'fa-file',
@@ -50,12 +51,4 @@ app.controller('main',function($transitions, $state, $timeout){
 			'loc'	:'resume'
 		}
 	]
-
-	self.init = function(){
-		$timeout( function(){
-			self.menushow = true
-		}, 500)
-	}
-
-	self.init()
 })

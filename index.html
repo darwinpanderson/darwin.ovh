@@ -20,7 +20,7 @@
 		<script src="src/js/index.js"></script>		
 	</head>
 	<body ng-controller="main as m">
-		<div id="menuToggle" ng-click="m.menushow=!menushow">
+		<div id="menuToggle" ng-click="m.menushow=!m.menushow">
 			<i class="fas fa-bars"></i>
 		</div>
 		<div ng-show="m.menushow" class="navmenu">
@@ -35,7 +35,7 @@
 					Full-Stack Web Developer
 				</div>
 			</div>
-			<div class="item" ng-repeat="l in m.navlinks" ui-sref="{{l.loc}}">
+			<div class="item" ng-repeat="l in m.navlinks" ui-sref="{{l.loc}}" ng-click="m.menushow=!m.menushow">
 				<div class="icon">
 					<i class="fas {{l.icon}}"></i>
 				</div>

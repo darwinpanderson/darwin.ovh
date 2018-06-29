@@ -5,86 +5,98 @@ html, body, div, p{
 }
 
 html, body, #page{
-	height : 100%;
-	overflow: hidden;
-	position: relative;
+	position : relative;
+
+	overflow : hidden;
+	height   : 100%;
 }
 
 body{
+	position       : relative;
 	display        : flex;
+
 	background     : linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%), url(../img/escheresque_ste.png);
+
 	flex-direction : row;
-	position:		relative;
 }
 
 #menuToggle{
-	height:			auto;
-	padding:		5px;
-	color:			white;
-	transition:		color 0.5s, background-color 0.5s;
-	font-size:		20pt;
-	position:		absolute;
-	top:			0;
-	left:			0;
-	z-index:		1001;
+	position   : absolute;
+	top        : 0;
+	left       : 0;
+	z-index    : 1001;
+
+	height     : auto;
+	padding    : 5px;
+
+	font-size  : 20pt;
+	color      : white;
+
+	transition : color 0.5s, background-color 0.5s;
 }
 
 #menuToggle:hover{
-	cursor:			pointer;
-	cursor:			hand;
-	color:			teal;
-	background-color:	rgba(150,150,150,0.4);
+	cursor           : pointer;
+	cursor           : hand;
+	background-color : rgba(150,150,150,0.4);
+	color            : teal;
 }
 
 .navmenu{
 	height           : 100%;
+	min-width        : 200px;
 
+	opacity          : 1;
 	background-color : black;
 	font-family      : 'Lato', sans-serif;
 
+	transition       : all ease-in-out 0.5s;
+
 	flex             : 1;
-	opacity:		1;
-	transition:		all ease-in-out 0.5s;
-	min-width:		200px;
 }
 
 .navmenu.ng-hide{
-	width:			0;
-	opacity:		0;
-	margin-left:	-200px;
+	width       : 0;
+	margin-left : -200px;
+
+	opacity     : 0;
 }
 
 .navmenu.ng-hide-add, .navmenu.ng-hide-remove{
-	display:	block !important;
+	display : block !important;
 }
 
 .navmenu .head{
-	display:		flex;
-	flex-direction:	column;
-	justify-content: center;
-	align-items: center;
-	color:			white;
-	margin-bottom:	5px;
-	padding-bottom:	5px;
-	border-bottom:	3px double white;
-	text-align:		center;
-	margin-top:		10px;
+	display         : flex;
+
+	margin-top      : 10px;
+	margin-bottom   : 5px;
+	padding-bottom  : 5px;
+
+	color           : white;
+	text-align      : center;
+	border-bottom   : 3px double white;
+
+	flex-direction  : column;
+	justify-content : center;
+	align-items     : center;
 }
 
 .navmenu .head img{
-	max-width:50%;
-	max-height:50%;
-	border-radius:	50px;
+	max-height    : 50%;
+	max-width     : 50%;
+
+	border-radius : 50px;
 }
 
 .navmenu .header{
-	font-size:		11pt;
-	font-variant:  	small-caps;
+	font-size    : 11pt;
+	font-variant : small-caps;
 }
 
 .navmenu .subhead{
-	font-size:  	10pt;
-	font-variant:  	small-caps;
+	font-size    : 10pt;
+	font-variant : small-caps;
 }
 
 .navmenu .item{
@@ -113,10 +125,36 @@ body{
 }
 
 .content{
-	padding     : 	50px 15px 15px 15px;
+	padding     : 50px 15px 15px 15px;
 
 	font-family : 'Roboto', sans-serif;
 	color       : white;
 
 	flex        : 9;
+}
+
+/*mobile modifications*/
+@media screen and (max-width: 500px) {
+	.container{
+		font-size : 18pt;
+	}
+
+	.container .infodiv{
+		width : 80%;
+	}
+
+	.navmenu{
+		position         : absolute;
+		display          : block;
+		top              : 0;
+		left             : 0;
+		z-index          : 1000;
+
+		width            : 60%;
+
+		background-color : black;
+		font-family      : 'Lato', sans-serif;
+
+		flex             : 0;
+	}
 }
