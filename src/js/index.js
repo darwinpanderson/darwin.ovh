@@ -19,9 +19,9 @@ app.config(function($stateProvider, $urlRouterProvider){
 	.state('resume',{
 		url: '/resume',
 		templateUrl: 'src/html/resume.html',
-		onEnter: function($window) {
+		/*onEnter: function($window) {
             $window.open('https://resume.darwin.ovh', '_blank');
-        }
+        }*/
 	})
 })
 
@@ -41,7 +41,7 @@ app.controller('main',function($transitions, $state, $timeout){
 			'loc'	:'contact'
 		},{
 			'name'	:'projects',
-			'icon'	:'fa-address-card',
+			'icon'	:'fa-wrench',
 			'label'	:'Projects',
 			'loc'	:'projects'
 		},{

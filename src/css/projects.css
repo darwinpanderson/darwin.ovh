@@ -1,0 +1,19 @@
+.content .header{
+	width         : 90%;
+
+	text-align    : left;
+	border-bottom : 3px double white;
+}
+
+.items{
+	display        : flex;
+
+	height         : 100%;
+	width          : 40%;
+	margin         : auto;
+
+	white-space    : nowrap;
+
+	flex-direction : column;
+	align-items    : center;
+}
