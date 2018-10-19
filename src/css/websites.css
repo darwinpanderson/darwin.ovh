@@ -1,0 +1,105 @@
+.content .header{
+	width         : auto;
+
+	text-align    : left;
+	border-bottom : 3px double white;
+}
+
+.items{
+	display        : flex;
+
+	height         : auto;
+	width          : 100%;
+	margin         : auto;
+	margin-bottom:	15px;
+
+	flex-direction : column;
+
+}
+
+.projectItem{
+	width           : calc(90% - 30px);
+	margin          : 15px;
+
+	color           : inherit;
+	text-align      : left;
+
+	text-decoration : none;
+	display  		: flex;
+
+	flex-direction 	: row;
+
+	padding:		5px;
+	border-radius:	15px;
+
+	background     : linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(50,50,50,0.25) 50%, rgba(0,0,0,0.5) 100%);
+	box-shadow:  5px 5px 3px rgba(0,0,0,0.5);
+	min-height:			200px;
+}
+
+.projectImg{
+	flex:			1;
+	font-size:		32pt;
+	text-align:		center;
+	justify-content: center;
+	align-self:		center;
+	padding:		15px;
+}
+
+.projectImg img{
+	max-width:		250px;
+	border-radius:	5px;
+	box-shadow:  5px 5px 3px rgba(0,0,0,0.5);
+}
+
+.projectInfo{
+	flex:		19;
+	font-size 	   : 11pt;
+	padding:	15px;
+}
+
+.projectTitle{
+	color:		white;
+	font-size:		12pt;
+}
+
+.projectTitle a{
+	color:		white;
+	text-decoration: none;
+}
+
+.projectTitle a:hover{
+	color:		rgb(155,205,255);
+}
+
+.projectDate{
+	border-bottom:	1px solid white;
+	margin-bottom: 5px;
+}
+
+/*mobile modifications*/
+@media screen and (max-width: 650px) {
+	.projectItem{
+		font-size:	8pt;
+		flex-direction: column;
+	}
+
+	.projectImg img{
+		max-width:	auto;
+		border-radius: 5px;
+		box-shadow:  5px 5px 3px rgba(0,0,0,0.5);
+	}
+
+	.projectTitle{
+		font-size : 10pt;
+	}
+
+	.navmenu{
+		width            : 60%;
+
+		background-color : black;
+		font-family      : 'Lato', sans-serif;
+
+		flex             : 0;
+	}
+}

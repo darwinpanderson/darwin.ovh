@@ -12,16 +12,16 @@ app.config(function($stateProvider, $urlRouterProvider){
 		url: '/contact',
 		templateUrl: 'src/html/contact.html'
 	})
-	.state('projects',{
-		url: '/projects',
-		templateUrl: 'src/html/projects.html'
+	.state('websites',{
+		url: '/websites',
+		templateUrl: 'src/html/websites.html'
 	})
 	.state('resume',{
-		url: '/resume',
-		templateUrl: 'src/html/resume.html',
-		/*onEnter: function($window) {
+		url: '/home',
+		templateUrl: 'src/html/home.html',
+		onEnter: function($window) {
             $window.open('https://resume.darwin.ovh', '_blank');
-        }*/
+        }
 	})
 })
 
@@ -40,10 +40,10 @@ app.controller('main',function($transitions, $state, $timeout){
 			'label'	:'Contact Info',
 			'loc'	:'contact'
 		},{
-			'name'	:'projects',
+			'name'	:'websites',
 			'icon'	:'fa-wrench',
-			'label'	:'Projects',
-			'loc'	:'projects'
+			'label'	:'Websites',
+			'loc'	:'websites'
 		},{
 			'name'	:'resume',
 			'icon'	:'fa-file',

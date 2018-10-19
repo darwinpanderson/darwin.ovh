@@ -6,8 +6,7 @@ html, body, div, p{
 
 html, body, #page{
 	position : relative;
-
-	overflow : hidden;
+	overflow: hidden;
 	height   : 100%;
 }
 
@@ -140,7 +139,8 @@ body{
 	font-size   : 26pt;
 	color       : white;
 
-	flex        : 9;
+	flex        : 19;
+	overflow-y: auto;
 }
 
 /*small screen modifications*/
